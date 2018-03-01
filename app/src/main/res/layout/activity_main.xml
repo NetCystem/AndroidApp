@@ -9,6 +9,11 @@
     tools:context="com.example.macbook.androidapp.MainActivity">
 
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_top"
             android:layout_width="match_parent"
@@ -27,11 +32,15 @@
 
         </android.support.v7.widget.Toolbar>
 
+    </android.support.design.widget.AppBarLayout>
+
+
+
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar_top"
+            android:layout_below="@+id/appbar"
             android:id="@+id/recyclerView"
             >
         </android.support.v7.widget.RecyclerView>
@@ -129,9 +138,15 @@
 
         </LinearLayout>
 
-
-
-
     </android.support.v7.widget.Toolbar>
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/recyclerView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/addgreen" />
 
 </RelativeLayout>
